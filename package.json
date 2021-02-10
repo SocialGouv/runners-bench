@@ -1,0 +1,12 @@
+{
+  "name": "runners-bench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SocialGouv/runners-bench.git",
+  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "react-scripts": "^4.0.2",
+    "webche": "^0.1.2"
+  }
+}
