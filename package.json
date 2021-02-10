@@ -8,5 +8,8 @@
   "devDependencies": {
     "react-scripts": "^4.0.2",
     "webche": "^0.1.2"
+  },
+  "optionalDependencies": {
+    "fsevents" "^1.2.13"
   }
 }
