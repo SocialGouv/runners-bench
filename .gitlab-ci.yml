@@ -1,5 +1,6 @@
 
 Test:
+  image: ubuntu-latest
   stage: test
   script:
     - echo "hello"
