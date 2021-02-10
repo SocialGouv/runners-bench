@@ -1,0 +1,7 @@
+
+Test:
+  stage: test
+  script:
+    - echo "hello"
+    - yarn
+    - echo "finished"
