@@ -1,6 +1,6 @@
 
 Test:
-  image: ubuntu-latest
+  image: ubuntu:20.04
   stage: test
   script:
     - echo "hello"
