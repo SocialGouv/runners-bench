@@ -1,8 +1,25 @@
 
-Test:
+Test cache:
+  image: node:14.15
+  stage: test
+  cache:
+    key:
+      files:
+        - yarn.lock
+    paths:
+      - node_modules
+  script:
+    - echo "hello"
+    - yarn
+    - echo "finished"
+
+
+Test no cache:
   image: node:14.15
   stage: test
   script:
     - echo "hello"
     - yarn
     - echo "finished"
+    
+
