@@ -6,10 +6,6 @@
   "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
   "license": "MIT",
   "devDependencies": {
-    "react-scripts": "^4.0.2",
-    "webche": "^0.1.2"
-  },
-  "optionalDependencies": {
-    "fsevents": "^1.2.13"
+    "react-scripts": "^4.0.2"
   }
 }
