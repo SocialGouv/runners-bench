@@ -9,7 +9,7 @@
     "react-scripts": "^4.0.2"
   },
   "dependencies": {
-    "@socialgouv/kali-data": "^2.51.0",
+    "@socialgouv/kali-data": "^2.50.0",
     "@socialgouv/legi-data": "^2.27.0"
   }
 }
