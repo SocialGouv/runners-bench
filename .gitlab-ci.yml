@@ -23,3 +23,19 @@ Test no cache:
     - echo "finished"
     
 
+Test package manager cache:
+  image: node:14.15
+  stage: test
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: ${CI_JOB_NAME}
+    paths:
+      - .cache
+  script:
+    - echo "hello"
+    - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
+    - yarn
+    - echo "finished"
+
