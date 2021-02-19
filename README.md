@@ -8,6 +8,8 @@ Bench hosted GitLab VS online GitHub runners performance
 
 ## Results #1
 
+GitLab runners on kubernetes and cache with Minio backed by Azure blob storage
+
 runner | cache   | 1st run | 2nd      | 3rd     | 4th    | 5th    | 6th    | 7th    | Avg after 1st
 -------|---------|---------|----------|---------|--------|--------|--------|--------|:--------------:
 gitlab | no      | 2min    | 2min21   | 2min16  | 1min26 | 1min26 | 1min26 | 1min37 | **1m45**
