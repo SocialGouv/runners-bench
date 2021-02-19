@@ -10,6 +10,17 @@ Bench hosted GitLab VS online GitHub runners performance
 
 GitLab runners on kubernetes and cache with Minio backed by Azure blob storage
 
+3x [standard_e4s_v3 nodes](https://pcr.cloud-mercato.com/providers/azure/flavors/standard_e4s_v3) : 4CPU, 32Gb RAM
+
+```yml
+helper_cpu_request = "50m"
+helper_memory_request = "256Mi"
+cpu_request = "250m"
+memory_request = "1Gi"
+service_cpu_request = "250m"
+service_memory_request = "1Gi"
+```
+
 runner | cache   | 1st run | 2nd      | 3rd     | 4th    | 5th    | 6th    | 7th    | Avg after 1st
 -------|---------|---------|----------|---------|--------|--------|--------|--------|:--------------:
 gitlab | no      | 2min    | 2min21   | 2min16  | 1min26 | 1min26 | 1min26 | 1min37 | **1m45**
