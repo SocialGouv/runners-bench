@@ -10,8 +10,8 @@ Bench GitLab VS GitHub runners performance
 name       | description
 -----------|-------
 no-cache   | run a yarn install from scratch
-cache      | run a yarn install using
-yarn-cache | run a yarn install using a yarn .cache folder
+cache      | run a yarn install with `node_modules` runner caching
+yarn-cache | run a yarn install using a yarn `.cache` runner caching
 
 ## Results
 
