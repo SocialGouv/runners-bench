@@ -17,6 +17,8 @@ yarn-cache | run a yarn install using a yarn `.cache` runner caching
 
 Time in seconds as reported by both UIs.
 
+[![bench](./results.png)](https://excalidraw.com/#json=6269295034105856,oVPVZjXuE1Kt5lHc5D4ITw)
+
 ### SaaS (Free accounts)
 
 | runner           | job        | 1st run | 2nd   | 3rd  | 4th  | 5th  | Avg after 1st |
