@@ -23,10 +23,10 @@ Time in seconds as reported by both UIs.
 | ---------------- | ---------- | ------: | ----: | ---: | ---: | ---: | ------------: |
 | gitlab.com       | no-cache   | 116     | 123   | 114  | 136  | 128  |   **122**     |
 | gitlab.com       | cache      | 138     | 87    | 78   | 80   | 84   |   **82**      |
-| github.com       | yarn-cache |
+| giltab.com       | yarn-cache | 299     | 111   | 116  | 114  | 114  |   **114**     |
 | github.com       | no-cache   | 61      | 61    | 58   | 58   | 58   |   **57**      |
 | github.com       | cache      | 64      | 16    | 17   | 19   | 17   |   **18**      |
-| github.com       | yarn-cache |
+| github.com       | yarn-cache | 65      | 45    | 49   | 46   | 49   |   **47**      |
 
 ### With GitLab on-prem
 
@@ -36,7 +36,7 @@ Time in seconds as reported by both UIs.
 | gitlab #1        | cache      | 123     | 113   | 108  | 60   | 62   | 59   | 77   |   **80**      |
 | gitlab #2        | no-cache   | 170     | 85    | 85   | 82   | 69   | 81   | 70   |   **78**      |
 | gitlab #2        | cache      | 199     | 44    | 34   | 34   | 37   | 36   | 37   |   **37**      |
-| gitlab #2        | yarn-cache |
+| gitlab #2        | yarn-cache | 95      | 95    | 96   | 71   | 68   | 69   | 71   |   **78**      |
 
 3x [standard_e4s_v3 nodes](https://pcr.cloud-mercato.com/providers/azure/flavors/standard_e4s_v3) : 4vCPU, 32Gb RAM
 
