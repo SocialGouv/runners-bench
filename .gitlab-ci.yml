@@ -23,7 +23,7 @@ Test no cache:
     - echo "finished"
     
 
-Test package manager cache:
+Yarn cache:
   image: node:14.15
   stage: test
   cache:
