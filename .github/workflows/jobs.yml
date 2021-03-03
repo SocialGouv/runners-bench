@@ -97,3 +97,57 @@ jobs:
         run: |
           du -sh ${{ steps.setup.outputs.yarn_cache }}
           du -sh node_modules
+ 
+  yarn-cache-monthly-rotation:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup
+        id: setup
+        shell: bash
+        run: |
+          #
+          echo "Node $(node --version)"
+          echo "Yarn $(yarn --version)"
+          #
+          echo "::set-output name=yarn_cache::$(yarn cache dir)"
+          echo ::set-output name=month_of_year::$(date +"%Y-%m")
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Cache Yarn packages
+        id: cache-yarn-packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.setup.outputs.yarn_cache }}
+          key: ${{ runner.os }}-yarn_cache-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn_cache-
+
+      - name: Cache Yarn packages
+        if: steps.cache-yarn-packages.outputs.cache-hit != 'true'
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.setup.outputs.yarn_cache }}
+          key: ${{ runner.os }}-yarn_cache-${{ steps.cache_date.outputs.MONTH_OF_YEAR }}
+          restore-keys: |
+            ${{ runner.os }}-yarn_cache-
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: yarn install
+        run: |
+          yarn
+          echo "finished"
+
+      # Runs a set of commands using the runners shell
+      - name: info
+        run: |
+          du -sh ${{ steps.setup.outputs.yarn_cache }}
+          du -sh node_modules
+
