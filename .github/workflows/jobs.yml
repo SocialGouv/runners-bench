@@ -126,7 +126,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn_cache-
 
-      - name: Cache Yarn packages
+      - name: Monthly Cache Yarn packages
         if: steps.cache-yarn-packages.outputs.cache-hit != 'true'
         uses: actions/cache@v2
         with:
