@@ -1,9 +1,18 @@
 # runners-bench
 
-Bench GitLab VS GitHub runners performance
+Bench GitLab VS GitHub runners performance.
 
-- runner github : `ubuntu-latest`
-- runner gitlab : `node:14.15`
+- runner github : `ubuntu-latest` with free plan
+- runner gitlab : `node:14.15` with free plan and on AKS (France central)
+
+## Network
+
+This is our numbers for big file transfers from data.gouv.fr :
+
+name            | speed
+----------------|-------:
+GitHub runner   |   20mb/s
+GitLab on-prem  | >100mb/s
 
 ## Jobs
 
