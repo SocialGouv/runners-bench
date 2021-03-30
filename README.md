@@ -39,7 +39,7 @@ Time in seconds as reported by both UIs.
 | github.com       | cache      | 64      | 16    | 17   | 19   | 17   |   **18**      |
 | github.com       | yarn-cache | 65      | 45    | 49   | 46   | 49   |   **47**      |
 
-### With GitLab on-prem
+### With GitLab on-prem (AKS France)
 
 | runner           | job        | 1st run | 2nd   | 3rd  | 4th  | 5th  | 6th  | 7th  | Avg after 1st |
 | ---------------- | ---------- | ------: | ----: | ---: | ---: | ---: | ---: | ---: | :-----------: |
